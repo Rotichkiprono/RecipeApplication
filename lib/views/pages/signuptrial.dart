@@ -119,7 +119,7 @@ Widget build(BuildContext context) {
   'email': emailcontroller.text.trim(),
   'password': passwordController.text.trim(),
 };
-    response=await http.post(Uri.parse("https://fluttergroup.xyz/RecipesFelix/signup.php"),body:body );
+    response=await http.post(Uri.parse("https://api.com/RecipesFelix/signup.php"),body:body );
     if(response.statusCode==200){
       var serverResponse=json.decode(response.body);
       int signedUp=serverResponse['success'];
