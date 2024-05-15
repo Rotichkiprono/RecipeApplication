@@ -118,7 +118,7 @@ class Login extends StatelessWidget {
       String phonenumber, String password, BuildContext context) async {
     try {
       final response = await http.get(Uri.parse(
-          "https://fluttergroup.xyz/RecipesFelix/login.php?phonenumber=$phonenumber&password=$password"));
+          "https://api.com/RecipesFelix/login.php?phonenumber=$phonenumber&password=$password"));
 
       if (response.statusCode == 200) {
         var serverResponse = json.decode(response.body);
